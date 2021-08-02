@@ -1,0 +1,23 @@
+.containers {
+    display: flex;
+    gap: 32rem;
+    background-color: #f8f9fa;
+}
+.header {
+    border-right: 1px solid rgb(194, 193, 193, 0.7);
+}
+.content {
+    width: 100%;
+    height: auto;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* align-items: center; */
+}
+.footer {
+    width: 70%;
+    height: 0.5rem;
+    background-color: #4adf83;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

@@ -1,0 +1,160 @@
+<div class="wrapper">
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div>
+                <img src="{{SelectedUSer.userImage}}" alt="">
+            </div>
+            <div class="user-details">
+                <div class="username">
+                    <p>{{SelectedUSer.userName}}</p>
+                    <span>{{SelectedUSer.avtiveTime}}</span>
+                </div>
+
+                <!-- Header Right icons -->
+                <div class="icons">
+                    <i class="material-icons" style="font-size:30px; margin-right: 10px; opacity: 0.5;">search</i>
+                    <!-- <i class="material-icons" style="font-size:30px; margin-right: 10px;">more_vert</i> -->
+                    <div class="dropdown">
+                        <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" (click) = "selectedLinks('current')" [class.activee]="selectedcols=='current'">
+                            <i class="material-icons" style="font-size:30px; opacity: 0.5;" >more_vert</i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Contact info</a></li>
+                          <li><a class="dropdown-item" href="#">Select messages</a></li>
+                          <li><a class="dropdown-item" href="#">Mute notifications</a></li>
+                          <li><a class="dropdown-item" href="#">Clear messages</a></li>
+                          <li><a class="dropdown-item" href="#">Delete chat</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Header Right icons Close-->
+            </div>
+        </div>
+    </header>
+    <!-- Header Close -->
+
+    <!-- Section -->
+    <section  class="chat-area">
+        <!-- <img class="backgroundImg" src="https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png" alt=""> -->
+        <div class="chat-box">
+            <!-- Sent Meesage -->
+            <div class="chat outgoing"*ngFor="let text of usertext">
+                <div class="details" >
+                    <!-- <p>{{text.msgs}}
+                        <span>
+                            <span id="time">{{sentTime}}</span>
+                            <img *ngIf = "doubletick" style="width: 18px; height: 18px; opacity: 0.5;" src="../../assets/img/double-tick2.png" alt="">
+                        </span>
+                    </p> -->
+                    <div class="para">
+                        <p>{{text.msgs}}</p>
+                        <div style="display: flex; margin-top: 25px;">
+                            <span>{{sentTime | date :' h:mm a'}}</span>
+                            <img *ngIf = "singletick" style="width: 18px; height: 18px; opacity: 0.5;" src="../../assets/img/Singlemark.png" alt="">
+                            <img *ngIf = "doubletick" style="width: 18px; height: 18px; opacity: 0.5;" src="../../assets/img/double.png" alt="">
+                            <img *ngIf = "checked" style="width: 18px; height: 18px; opacity: 15;" src="../../assets/img/cheked.png" alt="">
+                        </div>
+                    </div>
+                    <div class="extradiv"></div>
+                </div>
+                
+            </div>
+            <!-- Sent Meesage Close-->
+
+            <!-- Incoming Message -->
+            <div class="chat incoming" >
+                <div class="details" *ngIf="comingmsg">
+                    <div class="extradiv2"></div>
+                    <p>{{incomingMSg}}<span id="time">{{sentTime | date :' h:mm a'}}</span></p>
+                    
+                </div>
+            </div>
+            <!-- Incoming Message Close-->
+
+        </div>
+        <!-- Displaying Emojis -->
+        <div class="emojis" *ngIf = "emojiIcons">
+            <div class="emoji-menu">
+                <ul>
+                    <li><i class='far fa-clock'></i></li>
+                    <li><i class="far fa-grin"></i></li>
+                    <li><i class='fas fa-coffee'></i></li>
+                    <li><i class="fas fa-futbol"></i></li>
+                    <li><i class='fas fa-car'></i></li>
+                    <li><i class="far fa-lightbulb"></i></li>
+                    <li><i class="far fa-plus-square"></i></li>
+                    <li><i class="far fa-flag"></i></li>
+                </ul>
+                <div class="input"><input type="text" name="" id="" placeholder="Search Emoji"></div>
+            </div>
+            <div class="emojis-icons">
+                <div class="smileys-emojis">
+                    <p>Smiley & People</p>
+                    <div class="emoji-images" >
+                        <div *ngFor = "let emojis of displayEmoji">
+                            <img [src]="emojis.emoji" alt="" width="40px" height="40px"> 
+                        </div>
+                    </div>
+                    <p>Animals & Nature</p>
+                    <div class="emoji-images" >
+                        <div *ngFor = "let emojis of displayAnimals">
+                            <img [src]="emojis.emoji" alt="" width="40px" height="40px"> 
+                        </div>
+                    </div>
+                    <p>Eat & Drink</p>
+                    <div class="emoji-images" >
+                        <div *ngFor = "let emojis of displayEats">
+                            <img [src]="emojis.emoji" alt="" width="40px" height="40px"> 
+                        </div>
+                    </div>
+                    <p>Anctivities</p>
+                    <div class="emoji-images" >
+                        <div *ngFor = "let emojis of displayActivities">
+                            <img [src]="emojis.emoji" alt="" width="40px" height="40px"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Displaying Emojis Close-->
+
+        <!-- Displaying Attachments -->
+        <div class="attach" *ngIf = "attachfiles">
+            <ul>
+                <li><a href="https://www.messenger.com/groupcall/create?source=whatsapp&ep=3" target="blank"><i class="fas fa-video"></i></a></li>
+                <li><a href=""><i class="material-icons" style="font-size:36px;padding-top: 4.5px;">person</i></a></li>
+                <li><a href=""><i class="fas fa-file"></i></a></li>
+                <li><a href=""><i class="fas fa-camera"></i></a></li>
+                <li><a href=""><i class="fas fa-image"></i></a></li>
+            </ul>
+        </div>
+        <!-- Displaying Attachments Close-->
+
+    </section>
+    <!-- Section close-->
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="row footer-details">
+            <div class="col col-md-1 footer-icons" >
+                    <i id="icons" class="far fa-grin" (click) = "selectedEmoji('current')" [class.color]="selectedicon=='current'"></i>
+                    <i id="icons" class="fas fa-paperclip" style="font-size: 26px; padding: 14px ;" (click) = "selectedLink('current')" [class.active]="selectedcol=='current'"></i>
+            </div>
+            <div class="col col-md-10 sendmsg">
+                <div class="sendmsgs">
+                    <form #myForm="ngForm">
+                        <input type="text" (keyup)="showsend()" name="usermsg" #usermsg="ngModel" [(ngModel)]="msg"  placeholder="Type a message" autocomplete="off">
+                    </form>
+                </div>
+            </div>
+            <div class="col col-md-1 microphone">
+                <!-- <i class='fas fa-microphone' *ngIf = "microphone"></i> -->
+                <!-- <i class='fas fa-paper-plane' id="send" (click)= "sendtext(msg)" *ngIf = "sendmessage"></i> -->
+                <i class='fas fa-paper-plane' id="send" (click)= "sendtext(msg)"></i>
+            </div>
+        
+        </div>
+    </div>
+    <!-- Footer Close-->
+</div>

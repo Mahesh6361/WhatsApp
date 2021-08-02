@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family:Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+    color: #4a4a4a;
+    background-color: #f8f9fa;
+}

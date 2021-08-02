@@ -1,0 +1,363 @@
+.containerr {
+    width: auto;
+    height: auto;
+    position: fixed;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    border-right: 0.1px solid rgb(194, 193, 193, 0.5);
+    border-bottom: 0.1px solid rgb(194, 193, 193, 0.3);
+    background-color:#ededed;
+    z-index: 1;
+}
+.header {
+    width: 32rem;
+    height: auto;
+    padding-bottom: 0.6rem;
+    background-color: #f6f6f6;
+
+}
+/* .dropdown {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+} */
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ededed;
+    padding: 11px 0px;
+}
+.header-image, .header-image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header-image {
+    padding-left: 20px;
+}
+.navbar {
+    width: 10rem;
+    justify-content: space-between;
+    margin-left: 17.4rem;
+}
+.navbar img {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.dropdown button{
+    border: none;
+}
+.dropdown-menu {
+    width: 220px;
+    height: 23.5rem;
+    background-color: white;
+    line-height: 40px;
+    padding: 15px;
+    padding-top: 20px;
+    margin-left: -183px;
+    margin-top: 15px;
+    justify-content: center;
+
+}
+.dropdown-menu li {
+    line-height: 42px;
+    font-size: 18px;
+}
+
+.notification {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: start;
+    gap: 20px;
+    padding: 25px 25px 18px 0px;
+    background-color: #9de1fe;
+    cursor: pointer;
+}
+.alert {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #f5fcff;
+    padding: 14px;
+    margin-left: 20px;
+    color: #9de1fe;
+}
+.alert-text {
+    width: auto;
+    height: auto;
+    color: #414c50;
+    font-size: 18px;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    line-height: 10px;
+    margin-top: 10px;
+}
+.alert-text span{
+    font-size: 16px;
+}
+.search-bar {
+    width: 29.8rem;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.8rem;
+    margin-top: 0.7rem;
+    border-radius: 1.3rem;
+}
+.search-bar span{
+    margin-left: 20px;
+    opacity: 0.8;
+}
+.search-bar input {
+    width: 22rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    margin-left: 40px;
+    opacity: 0.6;
+    font-size: 18px;
+}
+section {
+    position: fixed;
+    width: 32rem;
+    height: 43rem;
+    margin-top: 0.1rem;
+    background-color: white;
+    overflow-y: auto;
+    border-right: 0.1px solid rgb(194, 193, 193, 0.5);
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+section::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: rgb(231, 230, 230);
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    cursor: pointer;
+    
+}
+.content span {
+    margin-right: 15px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+.contnet-details {
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 1.3rem;
+    padding: 15px 10px 0px 10px;
+    
+}
+.usernames {
+    display: flex;
+    width: auto;
+    height: 100%;
+    padding: 10px 5px 15px 0px;
+    border-bottom: 0.1px solid rgb(194, 193, 193, 0.2);
+}
+.time {
+    width: 15rem;
+    text-align: right;
+    padding-right: 15px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+.contnet-details span {
+ font-size: 18px;
+ opacity: 0.7;
+}
+.contnet-details img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+    .contnet-details:hover {
+        background-color: #f7f7f7;
+    }
+
+    /* New Message */
+.newchat{
+    width: 32rem;
+    height: 12.2rem;
+    padding-bottom: 0.6rem;
+    background-color: #f6f6f6;
+    border-right: 0.1px solid rgb(194, 193, 193, 0.5);
+
+}
+
+.newchat-header {
+    width: 32rem;
+    height: 8.4rem;
+    background-color: #00bfa5;
+    padding: 10px;
+    display: flex;
+}
+.newchat-header .content{
+    width: 50%;
+    height: 50px;
+    padding: 10px ;
+    text-align: center;
+    margin-top: 62px;
+    margin-left: 15px;
+    color: white;
+}
+
+.newchat-header .content span {
+    font-size: 24px;
+    margin-right: 40px;
+    opacity: 15;
+}
+
+.newchat-header .content p{
+    font-size: 24px;
+}
+
+.contacts {
+    position: fixed;
+    width: 32rem;
+    height: 39rem;
+    margin-top: 0.1rem;
+    background-color: white;
+    overflow-y: auto;
+    border-right: 0.1px solid rgb(194, 193, 193, 0.5);
+    overflow-x: hidden;
+    padding-bottom: 5px;
+}
+.contacts::-webkit-scrollbar {
+    width: 0.4rem;
+}
+.contacts::-webkit-scrollbar-thumb {
+    background-color: rgb(231, 230, 230);
+  }
+.group {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 0.1px solid rgb(194, 193, 193, 0.3);
+}
+.newgroup {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0px 10px 0px 12px;
+}
+.newgroup span {
+    width: 60px;
+    height: 60px;
+    color: white;
+    border-radius: 50%;
+    background-color: #009688;
+    padding: 12px 12px 10px 5px;
+}
+.newgroup p {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+.frequently {
+    width: 100%;
+    height: 90px;
+    padding: 36px 41px;
+}
+.frequently p {
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    color: #009688;
+}
+.profile {
+    width: 32rem;
+    height: 8.4rem;
+    padding-bottom: 0.6rem;
+    background-color: #f6f6f6;
+    border-right: 0.1px solid rgb(194, 193, 193, 0.5);
+
+}.profile-header {
+    width: 32rem;
+    height: 8.4rem;
+    background-color: #00bfa5;
+    padding: 10px;
+    display: flex;
+}.profile-header .content{
+    width: 50%;
+    height: 50px;
+    padding: 10px ;
+    text-align: center;
+    margin-top: 62px;
+    margin-left: 15px;
+    color: white;
+}.profile-header .content span {
+    font-size: 24px;
+    margin-right: 40px;
+    opacity: 15;
+}.profile-header .content p {
+    font-size: 24px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 130px;
+    background-color: #ededed;
+    border-bottom: 0.1px solid rgba(211, 210, 210, 0.3);
+
+}
+.myimage {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}.myimage img {
+    width: 250px;
+    height: 250px;
+}
+.profile-name {
+    width: 100%;
+    height: 7.5rem;
+    background-color: white;
+    padding: 20px 38px;
+    border-bottom: 0.3px solid rgba(211, 210, 210, 0.4);
+
+}.name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 25px;
+    padding-right: 2px;
+}.name span {
+    opacity: 0.6;
+}
+.profile-notification {
+    width: 100%;
+    height: 6.4rem;
+    background-color: #ededed;
+    word-wrap: break-word;
+    padding: 20px 10px 20px 38px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}.profile-notification p {
+    opacity: 0.5;
+}

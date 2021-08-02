@@ -1,0 +1,66 @@
+ .main{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 200px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+h1  {
+    opacity: 0.8;
+    font-family:unset;
+    
+}
+.content {
+    width: 35rem;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 318px;
+    font-size: 18px;
+} 
+.content2 {
+    width: 35rem;
+    height: auto;
+    margin-left: 318px;
+    color: #525252;
+    font-size: 18px;
+} 
+.content img {
+    width: 318px;
+    width: 318px;
+    border-radius: 50%;
+    margin-bottom: 35px;
+}
+.main p {
+    margin-top: 18px;
+    font-size: 16px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+hr {
+    width: 35%;
+    margin-top: 2.5rem;
+    margin-left: 19rem;
+}
+.gethere span{
+    opacity: 0.6;
+    font-size: 18px;
+}
+
+.gethere a {
+    text-decoration: none;
+    color: green;
+    opacity: unset;
+    margin-left: 5px;
+}
+.footer {
+    width: 70.3%;
+    height: 0.5rem;
+    background-color: #4adf83;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

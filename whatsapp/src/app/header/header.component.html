@@ -1,0 +1,140 @@
+<div class="containerr" *ngIf = "header">
+    <div class="header">
+        <header class="header-content">
+            <div class="header-image" (click) = "showMyProfile()">
+                <img src="https://image.freepik.com/free-photo/little-boy-taking-picture-with-camera_23-2148086067.jpg" alt="">
+            </div>
+            <nav class="navbar">
+                <!-- <ul>
+                    <li><i class="fas fa-sync-alt"></i></li>
+                    <li (click)="showContacts()"><i class="far fa-comment-alt"></i></li>
+                    <li><i class="fas fa-ellipsis-v"></i></li>
+                    
+                </ul> -->
+                <img style="width: 28px; height: 28px;" src="../../assets/img/lifebuoy.png" alt="">
+                <img style="width: 28px; height: 28px;" src="../../assets/img/chat-message.png" alt="" (click)="showContacts()">
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img src="../../assets/img/menu-vertical.png" alt=""></button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">New group</a></li>
+                        <li><a class="dropdown-item" href="#">Create a room</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Archived</a></li>
+                        <li><a class="dropdown-item" href="#">Starred</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                      </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="notification" *ngIf="notification">
+            <div class="alert"><i class="fas fa-bell-slash"></i></div>
+            <div class="alert-text">
+                <p>Get notified of new messages</p>
+                <span>Turn on desktop notification <i class="fas fa-angle-right"></i></span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <span><i class="fas fa-search"></i></span>
+            <input type="text" name="" id="" placeholder="Search or start a new chat">
+        </div>
+    </div>
+    
+    <section>
+        <div class="content" *ngFor = "let user of userDetails">
+            <div class="contnet-details" (click)="selectUser(user.id)">
+                <img [src]="user.userImage" alt="" width="60px" height="60px">
+                <div class="usernames" >
+                    <div style="width: 11rem; line-height: 1.3rem;" >
+                        <h5>{{user.userName}}</h5>
+                        <span>{{user.msg}}</span>
+                    </div>
+                    <div class="time">
+                        <p>{{user.avtiveTime}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="containerr" *ngIf = "newChat">
+    <div class="newchat">
+        <header class="newchat-header">
+                <div class="content">
+                    <span (click)="hideContacts()"><i class='fas fa-arrow-left'></i></span>
+                    <p>New chat</p>
+                </div>
+        </header>
+        <div class="search-bar">
+            <span><i class="fas fa-search"></i></span>
+            <input type="text" name="" id="" placeholder="Search contacts">
+        </div>
+    </div>
+    
+    <div class="contacts">
+        <div class="group">
+            <div class="newgroup">
+                <span><i class="material-icons" style="font-size:36px">person_add</i></span>
+                <p>New group</p>
+            </div>
+        </div>
+        <div class="frequently">
+            <div>
+                <p>FREQUENTLY CONTACTED</p>
+            </div>
+        </div>
+        <div class="contactpeople" *ngFor = "let user of userDetails">
+            <div class="contnet-details" (click)="selectUser(user.id)">
+                <img [src]="user.userImage" alt="" width="60px" height="60px">
+                <div class="usernames" >
+                    <div style="width: 11rem; line-height: 1.3rem;" >
+                        <h5>{{user.userName}}</h5>
+                        <span>{{user.msg}}</span>
+                    </div>
+                    <div class="time">
+                        <p>{{user.avtiveTime}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="containerr" *ngIf = "myprofile">
+    <div class="profile">
+        <header class="profile-header">
+                <div class="content">
+                    <span (click)="hideMyProfile()"><i class='fas fa-arrow-left'></i></span>
+                    <p>Profile</p>
+                </div>
+        </header>
+    </div>
+    <div class="profile-image">
+        <div class="myimage">
+            <img src="https://image.freepik.com/free-photo/little-boy-taking-picture-with-camera_23-2148086067.jpg" alt="">
+        </div>
+    </div>
+    <div class="profile-name">
+        <div>
+            <p style="color: #3baea4;">Your Name</p>
+            <div class="name">
+                <p>G M</p>
+                <span><i class="fas fa-pen"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="profile-notification">
+        <p>This is not your username or pin. This name will be visible <br> to your WhatsApp contacts.</p>
+    </div>
+    <div class="profile-name">
+        <div>
+            <p style="color: #2ca89d;">About</p>
+            <div class="name">
+                <p>Available</p>
+                <span><i class="fas fa-pen"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
